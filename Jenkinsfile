@@ -1,5 +1,5 @@
 pipeline{
-  agent java-builds
+  agent {label 'java-builds'}
   stages {
     stage('Git cloning'){
       steps{
