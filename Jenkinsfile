@@ -1,10 +1,10 @@
 pipeline{
-  agent {label 'java-projects'}
+  agent any
   stages {
     stage('Git cloning'){
       steps{
       script{
-        git branch: 'main', url: 'https://github.com/rajeshvardhanbusam/demo-project.git'
+        git branch: 'main', url: 'https://github.com/karuparthi/demo-project.git'
       }
       } 
     }
