@@ -38,6 +38,28 @@ pipeline{
         }
       }
     }
+    stage('upload to nexus'){
+      steps{
+        script{
+          nexusArtifactUploader artifacts:
+          [
+            [
+              artifactId: 'springboot', 
+              classifier: '', 
+              file: 'targets/Uber', 
+              type: 'jar'
+            ]
+          ],
+            credentialsId: 'nexus',
+            groupId: 'com.example', 
+            nexusUrl: '15.206.213.232:8081', 
+            nexusVersion: 'nexus3',
+            protocol: 'http', 
+            repository: 'http://15.206.213.232:8081/repository/jyothi/',
+            version: '1.0.0'
+        }
+      }
+    }
   } 
 }      
            
