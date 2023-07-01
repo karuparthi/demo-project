@@ -6,7 +6,14 @@ pipeline{
       script{
         git branch: 'main', url: 'https://github.com/karuparthi/demo-project.git'
       }
-      } 
+    }
+  }
+     stage('unit test'){
+       steps{
+        script{
+          
+        }
+      }
     }
   } 
 }       
