@@ -32,8 +32,8 @@ pipeline{
     stage('sonarqube analsys'){
       steps{
         script{
-          withSonarQubeEnv(credentialsId: 'jenkins access') {
-             sh 'mvn clean package sonar:sonar'
+          withSonarQubeEnv(credentialsId: 'jenkins-1') {
+            sh 'mvn clean package sonar:sonar'
           }
         }
       }
