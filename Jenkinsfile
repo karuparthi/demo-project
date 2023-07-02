@@ -42,24 +42,24 @@ pipeline{
       steps{
         script{
           nexusArtifactUploader artifacts:
-          [
             [
-              artifactId: 'springboot', 
-              classifier: '', 
-              file: 'target/Uber.jar', 
-              type: 'jar'
-            ]
-          ],
-            credentialsId: 'nexus',
+              [
+                artifactId: 'springboot', 
+                classifier: '',
+                file: 'target/Uber.jar',
+                type: 'jar'
+              ]
+            ],
+            credentialsId: 'nexus', 
             groupId: 'com.example', 
-            nexusUrl: '15.206.213.232:8081', 
+            nexusUrl: '3.109.156.156:8081',
             nexusVersion: 'nexus3',
             protocol: 'http', 
-            repository: 'http://15.206.213.232:8081/repository/jyothi/',
+            repository: 'http://3.109.156.156:8081/repository/jyothik/',
             version: '1.0.0'
-        }
-      }
-    }
-  } 
-}      
+       }
+      } 
+    }      
+  }
+}  
            
